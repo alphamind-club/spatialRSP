@@ -55,7 +55,15 @@ def plot_rsp_comparison_barplot(
 
     x = np.arange(len(means))
     bar_width = 0.5
-    bars = ax.bar(x, means, yerr=errors, width=bar_width, color=colors, capsize=5)
+
+    bar_rects = ax.bar(
+        x,
+        means,
+        yerr=errors,
+        width=bar_width,
+        color=colors,
+        capsize=5,
+    )
 
     ax.axhline(1, color="black", linestyle="--", linewidth=1)
     ax.set_xticks(x)
@@ -64,8 +72,17 @@ def plot_rsp_comparison_barplot(
     ax.set_title(title, fontsize=14)
 
     if stars:
-        for i, star in enumerate(stars):
-            ax.text(x[i], means[i] + errors[i] + 0.02, star, ha="center", fontsize=18)
+        for rect, star in zip(bar_rects, stars):
+            height = rect.get_height()
+            ax.text(
+                rect.get_x() + rect.get_width() / 2,
+                height + 0.02,
+                star,
+                ha="center",
+                va="bottom",
+                fontsize=16,
+                color="black",
+            )
 
 
 def plot_expression_scatter(

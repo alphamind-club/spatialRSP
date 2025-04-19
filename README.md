@@ -1,0 +1,7 @@
+### Spatial Radar Scanning Plot
+
+**spatialRSP** (Spatial Radar Scanning Plot) is a Python toolkit for quantifying spatial signal patterns in 2D embeddings of high-dimensional data. It provides interpretable, statistically rigorous metrics that reveal how signals—such as gene expression, image features, or embedding vectors—are distributed across space.
+
+By computing two key metrics from Radar Scanning Plots (RSPs)—**A1 (coverage bias)** and **A2 (angular skew)**—spatialRSP captures spatial enrichment, dispersion, and directional asymmetry across expression thresholds. This enables robust detection of biologically or structurally meaningful patterns that are often missed by clustering or visual inspection.
+
+Originally developed for spatial transcriptomics, spatialRSP is broadly applicable to single-cell data, imaging, NLP embeddings, and more. It offers a generalizable framework for identifying spatial biomarkers, assessing heterogeneity, and interpreting complex embeddings with precision.

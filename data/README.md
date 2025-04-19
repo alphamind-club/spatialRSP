@@ -1,13 +1,13 @@
 ### Downloading Data
 
-Data required for analysis can be downloaded using the utility functions provided in the `spatialrsp.utils.io` module.
+Data required for analysis can be downloaded using the utility functions provided in the `spatialrsp.utils.fetchers` module.
 
 The datasets are primarily sourced from the Human Cell Landscape (HCL), the Kidney Precision Medicine Project (KPMP), and the Mouse Cell Atlas (MCA). Three primary functions are available for data acquisition: `download_hcl`, `download_kpmp`, and `download_mca`.
 
-These functions are designed to streamline the setup process by automatically handling the download and local storage of each dataset. To use them, users should import the desired function from the `spatialrsp.utils.io` module:
+These functions are designed to streamline the setup process by automatically handling the download and local storage of each dataset. To use them, users should import the desired function from the `spatialrsp.utils.fetchers` module:
 
 ```python
-from spatialrsp.utils.io import download_hcl, download_kpmp, download_mca
+from spatialrsp.utils.fetchers import download_hcl, download_kpmp, download_mca
 
 # Download HCL dataset
 download_hcl(verbose=True)

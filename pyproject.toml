@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=61", "wheel", "setuptools_scm[toml]>=7"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spatialrsp"
+dynamic = ["version"]
+description = "Quantifies spatial heterogeneity and directional bias in 2D embeddings via Radar Scanning Plots"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "Apache-2.0"
+
+authors = [
+    { name = "Zeyu Yao" },
+    { name = "Jake Y. Chen", email = "jakechen@uab.edu" },
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "anndata",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "requests",
+    "scikit-learn",
+    "scipy",
+    "seaborn",
+    "statsmodels",
+    "umap-learn",
+]
+
+keywords = [
+    "bioinformatics",
+    "computational biology",
+    "dimensionality reduction",
+    "embedding visualization",
+    "radar scanning plot",
+    "spatial analysis",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "black[jupyter]",
+    "flake8",
+    "isort",
+    "ipykernel",
+    "ipywidgets",
+]
+
+test = ["pytest"]
+
+formatting = ["black", "black[jupyter]", "flake8", "isort"]
+
+[project.urls]
+Homepage = "https://github.com/alphamind-club/spatialRSP"
+Documentation = "https://github.com/alphamind-club/spatialRSP#readme"
+Source = "https://github.com/alphamind-club/spatialRSP"
+"Issue Tracker" = "https://github.com/alphamind-club/spatialRSP/issues"
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "no-local-version"
+
+[tool.setuptools.packages.find]
+include = ["spatialrsp"]

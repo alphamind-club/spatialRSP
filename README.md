@@ -5,3 +5,5 @@
 By computing two key metrics from Radar Scanning Plots (RSPs)—**A1 (coverage bias)** and **A2 (angular skew)**—spatialRSP captures spatial enrichment, dispersion, and directional asymmetry across expression thresholds. This enables robust detection of biologically or structurally meaningful patterns that are often missed by clustering or visual inspection.
 
 Originally developed for spatial transcriptomics, spatialRSP is broadly applicable to single-cell data, imaging, NLP embeddings, and more. It offers a generalizable framework for identifying spatial biomarkers, assessing heterogeneity, and interpreting complex embeddings with precision.
+
+[![Cite this software](https://img.shields.io/badge/Cite%20the-method%20paper-4169E1?style=for-the-badge)](https://doi.org/10.1101/2024.06.25.599250)
